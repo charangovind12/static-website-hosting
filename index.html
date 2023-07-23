@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Cyber Defender</title>
+    <script src="index.js"></script>
+	<script src="https://unpkg.com/did-jwt"></script>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <img src="Cyber defender.png" alt="Cyber Defender Logo" width="250" height="100">
+    <nav>
+      <ul>
+        <li><a href="scanfile.html">Scan File</a></li>
+        <li><a href="scansystem.html">Scan System</a></li>
+        <li><a href="Linkscanner.html">Link Scanner</a></li>
+        <li><a href="system-protection.html">System Protection</a></li>
+        <li><a href="#" onclick="showDeveloperDetails()">Developer Details</a></li>
+      </ul>
+    </nav>
+    <main>
+      <h2>Welcome to Cyber Defender</h2>
+      <p>Protect your system from malware by using our powerful scanning tools. Choose from one of the options above to get started.</p>
+      <button onclick="alert('This feature is not yet available')">Get Antivirus</button>
+      <?php
+        require 'blockchain.php';
+      ?>
+	  <p> Stay Tuned for defending your system with an Highly safe and secure Antivirus Software 
+	</main>
+	<footer>
+      <p>2023 Cyber Defender</p>
+    </footer>
+  </body>
+</html>

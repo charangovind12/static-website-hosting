@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scan File</title>
+	  <img src="Cyber defender.png" alt="Cyber Defender Logo" width="250" height="100">
+	<link rel="stylesheet" type="text/css" href="style2.css">
+</head>
+<body>
+	<header>
+		<h1>MALWARE SCANNER</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="scansystem.html">Scan System</a></li>
+				<li><a href="#">Having Issue?</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main>
+		<h2>Scan a File</h2>
+		<p>Select a file to scan:</p>
+		<form method="post" enctype="multipart/form-data">
+			<input type="file" id="file" name="file">
+			<br><br>
+			<button type="submit" name="submit">Scan</button>
+		</form>
+		<p id="file-name"></p>
+        <?php if(isset($_POST['submit']) && isset($result)) : ?>
+        <h2>Scan Result:</h2>
+        <p><?php echo $result; ?></p>
+        <?php endif; ?>
+	</main>
+	
+	<footer>
+      <p>2023 Malware Scanner by Cyber Defender</p>
+    </footer>
+	<script>
+		const fileInput = document.querySelector("#file");
+		const fileName = document.querySelector("#file-name");
+		fileInput.addEventListener("change", (event) => {
+			fileName.textContent = `Selected file: ${event.target.files[0].name}`;
+		});
+	</script>
+</body>
+</html>

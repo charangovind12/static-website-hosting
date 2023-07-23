@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Link Checker</title>
+	  <img src="Cyber defender.png" alt="Cyber Defender Logo" width="250" height="100">
+
+	<header>
+		<h1>LINK SCANNER</h1>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="scanfile.html">Scan File</a></li>
+				<li><a href="scansystem.html">Scan System</a></li>
+				<li><a href="#">Having Issue?</a></li>
+			</ul>
+		</nav>
+	</header>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100vh;
+      }
+
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        margin-top: 50px;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #f8f8f8;
+        padding: 50px;
+        border-radius: 20px;
+        box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+        margin-bottom: 50px;
+        margin-top: 50px;
+      }
+
+      button {
+        padding: 10px 20px;
+        margin: 10px;
+        border-radius: 5px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #0062cc;
+      }
+
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background-color: #f8f8f8;
+        padding: 10px 0;
+      }
+    </style>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+    <script>
+      function checkLink() {
+        var link = document.getElementById("link-input").value;
+        // Perform link check here and set result to "safe" or "suspicious"
+        var result = "safe";
+        if (link.includes("phishing")) {
+          result = "suspicious";
+        }
+        // Display result
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <label for="link-input">Enter URL:</label>
+      <input type="text" id="link-input" name="link">
+      <button onclick="CheckURL()">Check URL</button>
+      <div id="result"></div>
+    </form>
+    <footer class="footer">
+      <p>2023 Link Scanner by Cyber Defender</p>
+    </footer>
+  </body>
+</html>
